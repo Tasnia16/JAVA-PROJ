@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FrontPageController">
+   <children>
+      <Label layoutX="200.0" layoutY="32.0" prefHeight="52.0" prefWidth="249.0" text="Welcome to the Shop!" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="84.0" prefHeight="276.0" prefWidth="106.0" text="       Groceries" textFill="#0f0d2e" />
+      <Label layoutX="247.0" layoutY="97.0" prefHeight="276.0" prefWidth="118.0" text="            Foods" />
+      <Label layoutX="449.0" layoutY="84.0" prefHeight="276.0" prefWidth="106.0" text="Cleaning Products" />
+      <Button layoutX="75.0" layoutY="271.0" mnemonicParsing="false" text="Visit" />
+      <Button layoutX="280.0" layoutY="271.0" mnemonicParsing="false" text="Visit" />
+      <Button layoutX="476.0" layoutY="271.0" mnemonicParsing="false" text="Visit" />
+   </children>
+</AnchorPane>
