@@ -8,14 +8,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+
 
 public class FrontPageController {
     @FXML
     private Button btnGenerate;
+
     @FXML
-    private void handleButtonAction(ActionEvent event) throws IOException {
+    public void handleButtonAction(ActionEvent event) throws IOException {
         if(event.getSource()==btnGenerate){
             Parent FrontPageController3 = FXMLLoader.load(getClass().getResource("/sample/Controller2.fxml"));
             Scene FrontPageScene3 = new Scene(FrontPageController3);
@@ -25,6 +28,6 @@ public class FrontPageController {
             FrontPageStage3.show();
         }
     }
+}
 
-    }
 
