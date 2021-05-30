@@ -56,6 +56,7 @@ public class FrontPageController{
             counts21 = 0,counts22 = 0,counts23 = 0,counts24 = 0;
 
 
+    @FXML
     protected void btnACtion(ActionEvent e) {
         if (e.getSource() == btn1)  {
             counts1++;

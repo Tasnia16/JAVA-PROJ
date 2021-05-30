@@ -18,6 +18,7 @@ public class Clean extends FrontPageController{
     public void initialize(ActionEvent event){
         try {
             if (event.getSource() == home) {
+
                 Parent FrontPageController3 = FXMLLoader.load(getClass().getResource("/sample/FrontPageController.fxml"));
                 Scene FrontPageScene3 = new Scene(FrontPageController3);
                 Stage FrontPageStage3 = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -31,7 +32,4 @@ public class Clean extends FrontPageController{
         }
     }
 
-    public void btnACtion(ActionEvent e) {
-        super.btnACtion(e);
-    }
 }
