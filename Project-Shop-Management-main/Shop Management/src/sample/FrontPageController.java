@@ -12,6 +12,7 @@ import java.io.IOException;
 
 
 public class FrontPageController{
+
     @FXML
     private Button btnGenerate;
     @FXML
@@ -20,9 +21,12 @@ public class FrontPageController{
     private Button btnGenerate2;
 
 
-        
+
     @FXML
     public void handleButtonAction(ActionEvent event) throws IOException {
+
+        Database.initialize();
+
         if(event.getSource()==btnGenerate){
             Parent FrontPageController3 = FXMLLoader.load(getClass().getResource("/sample/Controller2.fxml"));
             Scene FrontPageScene3 = new Scene(FrontPageController3);
@@ -56,103 +60,128 @@ public class FrontPageController{
             counts21 = 0,counts22 = 0,counts23 = 0,counts24 = 0;
 
 
+    //txt1.setText(Integer.toString(Database.list.get(1).amount));
     @FXML
     protected void btnACtion(ActionEvent e) {
         if (e.getSource() == btn1)  {
-            counts1++;
-            txt1.setText(counts1.toString());
+            //counts1++;
+            Database.list.get(1).amount++;
+            txt1.setText(Integer.toString(Database.list.get(1).amount) );
         }
         if (e.getSource() == btn2)  {
-            counts2++;
-            txt2.setText(counts2.toString());
+            //counts2++;
+            Database.list.get(2).amount++;
+            txt2.setText(Integer.toString(Database.list.get(2).amount) );
         }
         if (e.getSource() == btn3)  {
-            counts3++;
-            txt3.setText(counts3.toString());
+            //counts3++;
+            Database.list.get(3).amount++;
+            txt3.setText(Integer.toString(Database.list.get(3).amount) );
         }
         if (e.getSource() == btn4)  {
-            counts4++;
-            txt4.setText(counts4.toString());
+            //counts4++;
+            Database.list.get(4).amount++;
+            txt4.setText(Integer.toString(Database.list.get(4).amount) );
         }
         if (e.getSource() == btn5)  {
-            counts5++;
-            txt5.setText(counts5.toString());
+            //counts5++;
+            Database.list.get(5).amount++;
+            txt5.setText(Integer.toString(Database.list.get(5).amount) );
         }
         if (e.getSource() == btn6)  {
-            counts6++;
-            txt6.setText(counts6.toString());
+            //counts6++;
+            Database.list.get(6).amount++;
+            txt6.setText(Integer.toString(Database.list.get(6).amount) );
         }
         if (e.getSource() == btn7)  {
-            counts7++;
-            txt7.setText(counts7.toString());
+            //counts7++;
+            Database.list.get(7).amount++;
+            txt7.setText(Integer.toString(Database.list.get(7).amount) );
         }
         if (e.getSource() == btn8)  {
-            counts8++;
-            txt8.setText(counts8.toString());
+            //counts8++;
+            Database.list.get(8).amount++;
+            txt8.setText(Integer.toString(Database.list.get(8).amount) );
         }
         if (e.getSource() == btn9)  {
-            counts9++;
-            txt9.setText(counts9.toString());
+            //counts9++;
+            Database.list.get(9).amount++;
+            txt9.setText(Integer.toString(Database.list.get(9).amount) );
         }
         if (e.getSource() == btn10)  {
-            counts10++;
-            txt10.setText(counts10.toString());
+            //counts10++;
+            Database.list.get(10).amount++;
+            txt10.setText(Integer.toString(Database.list.get(10).amount) );
         }
         if (e.getSource() == btn11)  {
-            counts11++;
-            txt11.setText(counts11.toString());
+            //counts11++;
+            Database.list.get(11).amount++;
+            txt11.setText(Integer.toString(Database.list.get(11).amount) );
         }
         if (e.getSource() == btn12)  {
-            counts12++;
-            txt12.setText(counts12.toString());
+            //counts12++;
+            Database.list.get(12).amount++;
+            txt12.setText(Integer.toString(Database.list.get(12).amount) );
         }
         if (e.getSource() == btn13)  {
-            counts13++;
-            txt13.setText(counts13.toString());
+            //counts13++;
+            Database.list.get(13).amount++;
+            txt13.setText(Integer.toString(Database.list.get(13).amount) );
         }
         if (e.getSource() == btn14)  {
-            counts14++;
-            txt14.setText(counts14.toString());
+            //counts14++;
+            Database.list.get(14).amount++;
+            txt14.setText(Integer.toString(Database.list.get(14).amount) );
         }
         if (e.getSource() == btn15)  {
-            counts15++;
-            txt15.setText(counts15.toString());
+            //counts15++;
+            Database.list.get(15).amount++;
+            txt15.setText(Integer.toString(Database.list.get(15).amount) );
         }
         if (e.getSource() == btn16)  {
-            counts16++;
-            txt16.setText(counts16.toString());
+            //counts16++;
+            Database.list.get(16).amount++;
+            txt16.setText(Integer.toString(Database.list.get(16).amount) );
         }
         if (e.getSource() == btn17)  {
-            counts17++;
-            txt17.setText(counts17.toString());
+            //counts17++;
+            Database.list.get(17).amount++;
+            txt17.setText(Integer.toString(Database.list.get(17).amount) );
         }
         if (e.getSource() == btn18)  {
-            counts18++;
-            txt18.setText(counts18.toString());
+            //counts18++;
+            Database.list.get(18).amount++;
+            txt18.setText(Integer.toString(Database.list.get(18).amount) );
         }
         if (e.getSource() == btn19)  {
-            counts19++;
-            txt19.setText(counts19.toString());
+            //counts19++;
+            Database.list.get(19).amount++;
+            txt19.setText(Integer.toString(Database.list.get(19).amount) );
         }
         if (e.getSource() == btn20)  {
-            counts20++;
-            txt20.setText(counts20.toString());
+            //counts20++;
+            Database.list.get(20).amount++;
+            txt20.setText(Integer.toString(Database.list.get(20).amount) );
         }
         if (e.getSource() == btn21)  {
-            counts21++;
-            txt21.setText(counts21.toString());
+            //counts21++;
+            Database.list.get(21).amount++;
+            txt21.setText(Integer.toString(Database.list.get(21).amount) );
         }
         if (e.getSource() == btn22)  {
-            counts22++;
-            txt22.setText(counts22.toString());
+            //counts22++;
+            Database.list.get(22).amount++;
+            txt22.setText(Integer.toString(Database.list.get(22).amount) );
         }
         if (e.getSource() == btn23)  {
-            counts23++;
-            txt23.setText(counts23.toString());
+            //counts23++;
+            Database.list.get(23).amount++;
+            txt23.setText(Integer.toString(Database.list.get(23).amount) );
         }
         if (e.getSource() == btn24) {
-            counts24++;
-            txt24.setText(counts24.toString());
+            //counts24++;
+            Database.list.get(24).amount++;
+            txt24.setText(Integer.toString(Database.list.get(24).amount) );
         }
 
     }
