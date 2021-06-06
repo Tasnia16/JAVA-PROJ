@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.event.ActionEvent;
 
 import javax.swing.text.html.ImageView;
 import java.io.IOException;
@@ -16,7 +17,6 @@ import java.io.IOException;
 public class LoginController {
     @FXML
     private Label lblStatus;
-
 
     @FXML
     private TextField txtUserName;
@@ -45,5 +45,17 @@ public class LoginController {
 	}
     }
 
+    public void loadPreviousTransaction(ActionEvent event) throws Exception{
+	Database.loadDatabase();
+	//do fxml
+	Parent root = FXMLLoader.load(getClass().getResource("/sample/AfterReceiptView.fxml"));
+	Scene scene = new Scene(root);
+	Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	stage.setTitle("Shop Management");
+	stage.setScene(scene);
+	stage.show();
+    }
 
+       
 }
+

@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class ReceiptViewController implements Initializable{
+public class AfterReceiptViewController implements Initializable{
     @FXML
     private ListView<String> myListView;
 
@@ -40,19 +40,15 @@ public class ReceiptViewController implements Initializable{
 	myListView.setItems(itemList);
 	priceLabel.setText("Total Price: "+ Double.toString(price)+" Tk");
     }
-    public void saveTransaction(ActionEvent event) throws Exception{
-	//Database.printDatabase();
-	Database.saveDatabase();
-	Database.closeSession();
-	// DELETE IT LATER
-	//Database.printDatabase();
-	//Database.loadDatabase();
-	//do fxml
+    public void goHome(ActionEvent event) throws Exception{
 	Parent root = FXMLLoader.load(getClass().getResource("/sample/Login.fxml"));
 	Scene scene = new Scene(root);
 	Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 	stage.setTitle("Shop Management");
 	stage.setScene(scene);
 	stage.show();
+
+	Database.closeSession();
     }
+
 }

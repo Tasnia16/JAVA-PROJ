@@ -1,6 +1,7 @@
 package sample;
 
 import java.util.ArrayList;
+import java.io.*;
 
 public class Database{
     protected static int numberOfProducts=24;
@@ -93,7 +94,7 @@ public class Database{
 
     }
 
-    private static void printDatabase(){
+    protected static void printDatabase(){
 	for(int i=0; i<numberOfProducts; i++)  {
 	    System.out.println(list.get(i).name+"--"+list.get(i).amount+" kg --"+list.get(i).price+" Tk.");
 	}
@@ -112,5 +113,41 @@ public class Database{
 	}
 	return -1;
     }
-   }
+
+    protected static void saveDatabase() throws IOException, ClassNotFoundException{
+	SerializeDatabase obj = new SerializeDatabase();
+	obj.numberOfProducts = Database.numberOfProducts;
+	obj.list = new ArrayList<Product>();
+	obj.list.addAll(Database.list);
+
+	FileOutputStream fos = new FileOutputStream("database.ser");
+	ObjectOutputStream oos = new ObjectOutputStream(fos);
+	oos.writeObject(obj);
+
+	oos.close(); fos.close();
+
+	System.out.println("Database has been saved!----------------------------------------------");
+    }
+
+    protected static void closeSession(){
+	//close the database
+	//go to home page
+	Database.list.clear();
+    }
+
+    protected static void loadDatabase() throws IOException, ClassNotFoundException, FileNotFoundException{
+	SerializeDatabase obj = null;
+
+	FileInputStream fis = new FileInputStream("database.ser");
+	ObjectInputStream ois = new ObjectInputStream(fis);
+	obj = (SerializeDatabase)ois.readObject();
+	ois.close(); fis.close();
+
+	//only after database session was closed
+	Database.numberOfProducts = obj.numberOfProducts;
+	Database.list.addAll(obj.list);
+	System.out.println("Database has been loaded--------------------------------------------------------------");
+	//Database.printDatabase();
+    }
+}
 

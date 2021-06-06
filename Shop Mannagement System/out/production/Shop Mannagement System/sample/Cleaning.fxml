@@ -13,7 +13,7 @@
             <Image url="@Everything/JAVA-PROJ-main/Project-Shop-Management-main/Shop%20Management/src/sample/image/cln.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="425.0" fitWidth="615.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="434.0" fitWidth="636.0" layoutX="-11.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/cln.jpg" />
          </image>

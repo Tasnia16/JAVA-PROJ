@@ -55,6 +55,7 @@
                   <Image url="@image/login.png" />
                </image>
             </ImageView>
+            <Button layoutX="310.0" layoutY="365.0" mnemonicParsing="false" onAction="#loadPreviousTransaction" text="Record" />
          </children>
       </AnchorPane>
    </center>

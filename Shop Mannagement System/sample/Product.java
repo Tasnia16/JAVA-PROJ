@@ -1,6 +1,7 @@
 package sample;
+import java.io.Serializable;
 
-public class Product{
+public class Product implements Serializable{
     String name;
     double price;
     int amount;
